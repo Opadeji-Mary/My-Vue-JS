@@ -40,7 +40,7 @@
           v-model="v$.form.password.$model"
           name="Password"
           id=""
-                  />
+           />
         <div v-for="error in v$.form.password.$errors" :key="error">
           <span class="text-sm text-danger">{{ error.$message }}</span>
         </div>

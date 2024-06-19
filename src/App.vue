@@ -1,15 +1,19 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import OptionComponent from './components/OptionComponent.vue'
-import FormComponent from './components/FormComponent.vue'
 
+const user ={
+  name:'mary'
+}
 </script>
 
 <template>
-  <!-- <HelloWorld/> -->
-  <OptionComponent/>
-  <FormComponent/>
+  <RouterLink :to="{name:'home'}">Go to Home</RouterLink>
+  <RouterLink to="/about">Go to About</RouterLink> 
+  <RouterLink :to="`/user/${user.name}`">Go to User</RouterLink>
+  <RouterLink to="/recipes" >Go to Recipes</RouterLink>
+  <router-link :to="'/to-do'">Todo page</router-link>
+
+  <RouterView/>
+  
 </template>
 
 <style scoped>
